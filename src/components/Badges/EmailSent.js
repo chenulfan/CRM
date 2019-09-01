@@ -9,9 +9,10 @@ class EmailSent extends Component {
 
         return (
             <span>
-                <div className="circle">
+                <div className="circle spring green ">
                     <i class="fas fa-envelope badge"></i>
                 </div>
+                
             </span>
 
         )

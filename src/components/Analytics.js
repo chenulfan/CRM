@@ -13,14 +13,16 @@ class Analytics extends Component {
     render() {
 
         return (
-           <div>
-                <button onClick={this.countries}>aaaaaaaaaaaaaaaaaaaaaaaa</button>
-                <LineChartTemp clients={this.props.clients}/>
-                <HorizontialBarChart clients={this.props.clients}/>
-                <VerticalBarChart clients={this.props.clients}/>
-                <Badges clients={this.props.clients}/>
-                <PieChart clients={this.props.clients}/>
+            <div>
+                <Badges clients={this.props.clients} />
+                {/* <LineChartTemp clients={this.props.clients}/> */}
+                <div className="wrapper-charts">
+                    <HorizontialBarChart clients={this.props.clients} />
+                    <VerticalBarChart clients={this.props.clients} />
+                </div>
+                <PieChart clients={this.props.clients} />
             </div>
+                // <button onClick={this.countries}>aaaaaaaaaaaaaaaaaaaaaaaa</button>
 
         )
     }

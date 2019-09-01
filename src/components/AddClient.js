@@ -37,25 +37,25 @@ class AddClient extends Component {
     render() {
 
         return (
-            <div>
+            <div className="wrapper-add-client">
                 <h1> Add Client</h1>
-                <div className="input-field col s6">
+                <div className="input-field col s6 actions-inp">
                     <label className="active" for="first_name2">Full Name</label>
                     <input type="text" className="validate" name="name" value={this.state.name} onChange={this.handleInput}></input>
                 </div>
-                <div className="input-field col s6">
+                <div className="input-field col s6 actions-inp">
                     <label className="active" for="first_name2">Country</label>
                     <input type="text" className="validate" name="country" value={this.state.country} onChange={this.handleInput}></input>
                 </div>
-                <div className="input-field col s6">
+                <div className="input-field col s6 actions-inp">
                     <label className="active" for="first_name2">Email</label>
                     <input type="text" className="validate" name="email" value={this.state.email} onChange={this.handleInput}></input>
                 </div>
-                <div className="input-field col s6">
+                <div className="input-field col s6 actions-inp">
                     <label className="active" for="first_name2">Owner</label>
                     <input type="text" className="validate" name="owner" value={this.state.owner} onChange={this.handleInput}></input>
                 </div>
-                <button onClick={this.handleClick}> add</button>
+                <button className="btn-actions" onClick={this.handleClick}> Add Client</button>
             </div>
 
         )

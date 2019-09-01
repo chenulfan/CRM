@@ -6,19 +6,11 @@ import NewClient from "./Badges/NewClient"
 import OutstandingClients from "./Badges/OutstandingClients"
 import TopCountry from "./Badges/TopCountry"
 class Badges extends Component {
-    constructor() {
-        super()
-        this.state = {
-        }
-    }
-
     numOfNewClietns = () => {
         let sum = 0
         let d = new Date()
         let currentMonth = d.getMonth() + 1
         let currentYear = d.getFullYear()
-        // console.log(currentMonth)
-        // console.log(currentYear)
         let clients = this.props.clients
         clients.map(c => {
             let dateArr = moment(c.firstContact).format('l').split("/")
@@ -28,9 +20,6 @@ class Badges extends Component {
                 sum++
             }
         })
-        // clients = clients.filter(c => c.sold === false)
-        // console.log(clients)
-        // return clients.length
         return sum
     }
     numOfUnsold = () => {
@@ -62,29 +51,29 @@ class Badges extends Component {
                 <div class="wrapperBadgeGrid">
                     <EmailSent />
                     <div className="detailGrid">
-                        <div> {this.numOfEmails()} </div>
-                        <div>Emails</div>
+                        <div className="badge-detail-number"> {this.numOfEmails()} </div>
+                        <div className="badge-detail">Emails</div>
                     </div>
                 </div>
                 <div class="wrapperBadgeGrid">
                     <NewClient />
                     <div className="detailGrid">
-                        <div> {this.numOfNewClietns()} </div>
-                        <div> New Clients</div>
+                        <div className="badge-detail-number"> {this.numOfNewClietns()} </div>
+                        <div className="badge-detail"> New Clients</div>
                     </div>
                 </div>
                 <div class="wrapperBadgeGrid">
                     <OutstandingClients />
                     <div className="detailGrid">
-                        <div>  {this.numOfUnsold()} </div>
-                        <div> Outstanding Clients </div>
+                        <div className="badge-detail-number">  {this.numOfUnsold()} </div>
+                        <div className="badge-detail"> Outstanding Clients </div>
                     </div>
                 </div>
                 <div class="wrapperBadgeGrid">
                     <TopCountry />
                     <div className="detailGrid">
-                        <div> {this.topCountry()} </div>
-                        <div> Hottest Country </div>
+                        <div className="badge-detail-number"> {this.topCountry()} </div>
+                        <div className="badge-detail"> Hottest Country </div>
                     </div>
                 </div>
 

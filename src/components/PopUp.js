@@ -10,7 +10,7 @@ class PopUp extends Component {
         this.state = {
             fullName: this.props.popUpObj.name,
             name: this.props.popUpObj.name.split(" ")[0],
-            surName: this.props.popUpObj.name.split(" ")[1], 
+            surName: this.props.popUpObj.name.split(" ")[1],
             country: this.props.popUpObj.country
         }
     }
@@ -24,7 +24,7 @@ class PopUp extends Component {
     }
 
     updateClient = async () => {
-        const fullName =  this.state.fullName
+        const fullName = this.state.fullName
         const newName = this.state.name + " " + this.state.surName
         console.log(fullName)
         console.log(newName)
@@ -35,27 +35,35 @@ class PopUp extends Component {
         console.log(objClient)
         await axios.put(`http://localhost:3030/updateClient/${fullName}`, objClient)
         this.props.getFromDataBase()
+        this.close()
     }
     render() {
         return (
             <div className="update-box">
-                <div onClick={this.close}> X</div>
-                <div>
-                    <span>Name:</span>
-                    <div className="input-field col s6">
-                        <input id="first_name2" type="text" name="name" className="validate inpPopUp" value={this.state.name} onChange={this.handleInput}></input>
+                <div className="X" onClick={this.close}> X</div>
+                <div className="wrapper-detail-popUp">
+                    <div className="popUp-Wrapper-row">
+                        <div className="subHeader-popUp-box" >Name:</div>
+                        <div className="input-field col s6 inpPopUp">
+                            <input id="first_name2" type="text" name="name" className="validate inpPopUp" value={this.state.name} onChange={this.handleInput}></input>
+                        </div>
                     </div>
-                    <span>Surame:</span>
-                    <div className="input-field col s6">
-                        <input id="first_name2" type="text" name="surName" className="validate inpPopUp" value={this.state.surName} onChange={this.handleInput}></input>
+
+                    <div className="popUp-Wrapper-row">
+                        <div className="subHeader-popUp-box" >Surame:</div>
+                        <div className="input-field col s6 ">
+                            <input id="first_name2" type="text" name="surName" className="validate inpPopUp" value={this.state.surName} onChange={this.handleInput}></input>
+                        </div>
                     </div>
-                    <span>Country:</span>
-                    <div className="input-field col s6">
-                        <input id="first_name2" type="text" name="country" className="validate inpPopUp" value={this.state.country} onChange={this.handleInput}></input>
+
+                    <div className="popUp-Wrapper-row">
+                        <div className="subHeader-popUp-box" >Country:</div>
+                        <div className="input-field col s6">
+                            <input id="first_name2" type="text" name="country" className="validate inpPopUp" value={this.state.country} onChange={this.handleInput}></input>
+                        </div>
+                        <button className="btn-popUp" onClick={this.updateClient}> Update </button>
                     </div>
-                    <button onClick={this.updateClient}> Update </button>
                 </div>
-                <div>X</div>
             </div>
 
         )

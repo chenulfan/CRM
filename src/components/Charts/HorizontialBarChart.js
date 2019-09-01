@@ -44,21 +44,24 @@ export default class HorizontialBarChart extends PureComponent {
     render() {
         const data = this.top3Owners()
         return (
+            <div >
+                <h5 className="header-h5-chart">Top Employees</h5>
+                <BarChart
+                    width={600}
+                    height={300}
+                    data={data}
+                    layout="vertical"
+                    margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+                >
+                    <XAxis type="number" />
+                    <YAxis type="category" dataKey="name" />
+                    <CartesianGrid strokeDasharray="3 3" />
+                    <Tooltip />
+                    <Legend />
+                    <Bar dataKey="sales" fill="	#FF69B4" />
+                </BarChart>
 
-            <BarChart
-                width={600}
-                height={300}
-                data={data}
-                layout="vertical"
-                margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
-            >
-                <XAxis type="number" />
-                <YAxis type="category" dataKey="name" />
-                <CartesianGrid strokeDasharray="3 3" />
-                <Tooltip />
-                <Legend />
-                <Bar dataKey="sales" fill="#82ca9d" />
-            </BarChart>
-        );
+            </div>
+        )
     }
 }

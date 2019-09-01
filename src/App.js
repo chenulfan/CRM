@@ -42,7 +42,7 @@ class App extends Component {
         <Route exact path="/" render={() => <Landing  getFromDataBase={this.getFromDataBase} clients={this.state.clients} />} />
         <Route exact path="/actions" render={() => <Actions getFromDataBase={this.getFromDataBase} clients={this.state.clients} />} />
         <Route exact path="/analytics" render={() => <Analytics clients={this.state.clients} /> } />
-        <button onClick={this.some}> asassadsadsadasdasdasdasdasdasdasd</button>
+        {/* <button onClick={this.some}> asassadsadsadasdasdasdasdasdasdasd</button> */}
       </Router>
     )
   }

@@ -28,8 +28,9 @@ export default class VerticalBarChart extends PureComponent {
 
     return (
       <div>
-        <div>
-          <select onChange={this.handleCheck} className="checkBox">
+        <div className="header-chart">
+          <h5> Sales By:</h5>
+          <select onChange={this.handleCheck} className="check-Box-Chart">
             <option value="showCountry"> Contry </option>
             <option value="showOwner"> Owner </option>
             <option value="showMonth"> Month </option>

@@ -25,7 +25,7 @@ class Client extends Component {
                 <td className="row-item"> {client.country} </td>
                 <td className="row-item"> {moment(client.firstContact).format("l")} </td>
                 <td className="row-item"> {client.email} </td>
-                <div className="row-item"> {client.sold ? <div> V </div> : <div> - </div>} </div>
+                <div className="row-item"> {client.sold ? <div><i class="fas fa-check"></i> </div> : <div> <i class="fas fa-times"></i> </div>} </div>
                 <td className="row-item"> {client.owner} </td>
             </tr>
             

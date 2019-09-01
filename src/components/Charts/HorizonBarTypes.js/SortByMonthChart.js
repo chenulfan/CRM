@@ -46,7 +46,7 @@ export default class SortByMonthChart extends PureComponent {
                 <YAxis />
                 <Tooltip />
                 <Legend />
-                <Bar dataKey="sales" fill="#82ca9d" />
+                <Bar dataKey="sales" fill="#00CED1" />
             </BarChart>
 
     

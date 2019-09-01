@@ -10,7 +10,7 @@ class OutstandingClients extends Component {
 
         return (
             <span>
-                <div className="circle">
+                <div className="circle red">
                     <i class="fas fa-users specialBadge"></i>
                 </div>
             </span>

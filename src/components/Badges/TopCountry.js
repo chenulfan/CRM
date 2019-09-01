@@ -9,7 +9,7 @@ class TopCountry extends Component {
 
         return (
             <span>
-                <div className="circle">
+                <div className="circle orange">
                     <i class="fas fa-globe-americas badge"></i>
                 </div>
             </span>

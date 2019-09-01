@@ -1,4 +1,4 @@
-body{
+/* body{
   background: #ECF0F1;
 }
 .ref{
@@ -22,15 +22,17 @@ body{
 #table-header , .client-row{
   display: grid;
   grid-template-columns:  repeat(7, 1fr);
-  
+
 }
+
 .header-item{
   width: 100%;
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: center;
-  background-color: #4CAF50;
+  background-color: rgb(135, 155, 223);
   color: white;
+
 }
 .row-item{
   text-align: center;
@@ -63,14 +65,16 @@ select{
 .input-field{
   margin-left: 10px;
   margin-top: 30px;
+
 }
 .circle{
   position: relative;
-  background: #4CAF50;
+  background: rgb(104, 175, 76);
   width:100px;
   height:100px;
   margin: 15px;
   box-shadow: 1px 1px 8px black;
+  border: 1px solid black;
 }
 .badge{
   position: absolute;
@@ -92,7 +96,7 @@ select{
   display: grid;
   grid-template-columns: 1fr 1fr;
   width: 200px;
-} */
+} 
 .wrapper-Arrows{
   display: grid;
   grid-template-columns: 1fr 80px 1fr;
@@ -107,18 +111,140 @@ select{
   display: grid;
   justify-content: center;
 }
-.update-box{
-  position: fixed;
-  background: rgb(0,0,0,0.9);
-  width: 500px;
-  height: 700px;
-  top:40%;
-  left:50%;
-  color:wheat;
-}
-.inpPopUp{
-  color:wheat;
-}
+
 .Show-Chart{
   display: none;
 }
+.badge-detail-number{
+  font-size: 3em;
+}
+.badge-detail{
+  font-size: 1.5em;
+}
+
+.wrapperBadgeGrid{
+  margin-top: 30px;
+  margin-left: 30px;
+  display: grid;
+  grid-template-columns: 125px 1fr;
+}
+.wrapper-charts{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.check-Box-Chart{
+  border-bottom: 1px solid black;
+  background: #ECF0F1;
+  margin-top: 8px;
+}
+.header-chart{
+  display: grid;
+  grid-template-columns: 110px 1fr;
+}
+.header-h5-chart{
+  margin-left: 10px;
+}
+.header-h5-pieChart{
+  margin-left: 300px;
+  position: absolute;
+  top: 610px;
+}
+.popUp-Wrapper-row{
+  display: grid;
+  grid-template-columns: 120px 1fr;
+
+}
+.subHeader-popUp-box{
+  margin-top: 37px;
+  margin-left: 35px;
+  height: 50px;
+  font-size: 1.5em;
+}
+.X{
+  margin-top: 10px;
+  margin-left: 20px;
+  cursor: pointer;
+  font-size: 1.5em;
+}
+.X:hover{
+
+}
+.inpPopUp{
+  color:rgb(218, 176, 42);
+  width: 180px;
+  height: 46px;
+}
+.wrapper-detail-popUp{
+  display: grid;
+  grid-template-rows: 50px 50px 50px;
+}
+.update-box{
+  position: fixed;
+  background: rgb(0,0,0,0.9);
+  width: 350px;
+  height: 300px;
+  top:40%;
+  left:50%;
+  color:rgb(218, 176, 42);
+  border-radius: 20px;
+}
+
+.btn-popUp{
+  text-decoration: none;
+  background: rgba(250, 208, 58, 0.897);
+  border: none;
+  color: rgb(0, 0, 0);
+  width: 275px;
+  height: 40px;
+  border-radius: 5px;
+  margin-left: 40px;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+.btn-popUp:hover{
+  background: rgb(211, 169, 19);
+}
+.actions-inp{
+  width: 80%;
+}
+.wrapper-add-client, .wrapper-update-client{
+  margin-left: 40px;
+}
+.wrapper-actions{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.btn-actions{
+  text-decoration: none;
+  background: none;
+  border: none;
+  color: rgb(0, 0, 0);
+  height: 40px;
+  width:160px;
+  border-radius: 5px;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+.btn-actions:hover{
+  background: #D9DDDE;
+  border-radius: 10px;
+}
+.wrapper-btn-actions{
+  display: grid;
+  grid-template-columns: 165px 200px;
+}
+option{
+  width: 500px;
+}
+.abc{
+  width: 500px;
+  color:red;
+}
+.fa-check{
+  margin-top: 20px;
+  color: rgb(5, 138, 5);
+}
+.fa-times{
+  margin-top: 20px;
+  color: rgb(235, 41, 41);
+} */

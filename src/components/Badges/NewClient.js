@@ -9,7 +9,7 @@ class NewClient extends Component {
         
         return (
             <span>
-                <div className="circle">
+                <div className="circle blue">
                     <i class="fas fa-chart-line badge"></i>
                 </div>
             </span>

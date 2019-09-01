@@ -49,19 +49,11 @@ class Landing extends Component {
     }
     close = () => this.setState({showPopUp: false})    
 
-    // updateClient = (objClient) =>{
-    //     await this.handleClick()
-    //     await axios.put(`http://localhost:3030/changeOwner/${this.state.id}`, {objClient})
-    //     this.props.getFromDataBase()
-    // }
     render() {
         let page = this.state.page
-        // console.log(this.filterClients().splice(20))
+        console.log(this.props.clients)
         return (
             <div>
-                {/* <button onClick={this.some}>  aaaaaaaaaaa</button> */}
-
-                {/* ---------------------------------- input -------------------------------------------------- */}
                 <div className="wrapperInput">
                     
                     <div className="input-field col s6">
@@ -99,7 +91,6 @@ class Landing extends Component {
                         <div className="range-Pages">{page*20+1} - {(page+1)*20}</div>
                         <div> <i  onClick={this.loadMore} className="fas fa-chevron-right"></i></div>
                     </div>
-                    {/* <button onClick={this.loadMore}>aaaaaaaaaaaaaaaaaaaaaaaaaaa</button> */}
 
                     {this.state.showPopUp? <PopUp getFromDataBase={this.props.getFromDataBase} close={this.close} popUpObj={this.state.popUpObj}/> : null }
             </div>
