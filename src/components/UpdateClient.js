@@ -26,7 +26,7 @@ class UpdateClient extends Component {
     }
     handleClick = async () => {
         let id = this.state.id
-        let clients = await axios.get('http://localhost:3030/clients')
+        let clients = await axios.get('/clients')
         console.log(clients.data)
         clients.data.find(c => c.name === this.state.name ? id = c._id : null)
         console.log(id)
@@ -36,13 +36,13 @@ class UpdateClient extends Component {
     UpdateClientToSold = async () => {
         await this.handleClick()
         console.log(this.state.id)
-        await axios.put(`http://localhost:3030/sold/${this.state.id}`)
+        await axios.put(`/sold/${this.state.id}`)
         this.props.getFromDataBase()
     }
     ChangeOwnerToTheClient = async () => {
         await this.handleClick()
 
-        await axios.put(`http://localhost:3030/changeOwner/${this.state.id}`, { owner: this.state.owner })
+        await axios.put(`/changeOwner/${this.state.id}`, { owner: this.state.owner })
         this.props.getFromDataBase()
     }
 

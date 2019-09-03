@@ -3,9 +3,9 @@ const bodyParser =require("body-parser")
 const app =express()
 const mongoose = require("mongoose")
 const Api = require( "./src/routes/Api")
+app.use(express.static(path.join(__dirname, 'build')));
+const PORT = 3030
 
-const PORT = 8080
-app.listen(PORT);
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: false}))
@@ -18,7 +18,11 @@ app.use(function (req, res, next) {
 })
 app.use('/', Api)
 
-mongoose.connect(process.env.MONGODB_URI||"mongodb://localhost/clients", { useNewUrlParser: true })
+mongoose.connect( process.env.MONGODB_URI || "mongodb://localhost/clients", { useNewUrlParser: true } )
+
+app.get('*', function (req, res) {
+    res.sendFile(path.join(__dirname, 'build', 'index.html'));
+})
 
 app.listen(process.env.PORT || PORT, function(){
     console.log("listeing")

@@ -33,7 +33,7 @@ class PopUp extends Component {
             country: this.state.country
         }
         console.log(objClient)
-        await axios.put(`http://localhost:3030/updateClient/${fullName}`, objClient)
+        await axios.put(`/updateClient/${fullName}`, objClient)
         this.props.getFromDataBase()
         this.close()
     }

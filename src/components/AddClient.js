@@ -31,7 +31,7 @@ class AddClient extends Component {
             "owner":this.state.owner
         }
         console.log(obj)
-        await axios.post('http://localhost:3030/client', obj)
+        await axios.post('/client', obj)
         this.props.getFromDataBase()
       }
     render() {

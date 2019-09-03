@@ -25,13 +25,13 @@ class App extends Component {
   }
 
   getFromDataBase = async () => {
-    let clients = await axios.get('http://localhost:3030/clients')
+    let clients = await axios.get('/clients')
     this.setState({
       clients: clients.data
     })
   }
   some =  () => {
-    data.map(d =>  axios.post('http://localhost:3030/client', d) )
+    data.map(d =>  axios.post('/client', d) )
   }
 
   render() {
