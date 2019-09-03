@@ -3,6 +3,7 @@ const bodyParser =require("body-parser")
 const app =express()
 const mongoose = require("mongoose")
 const Api = require( "./src/routes/Api")
+const path = require("path")
 app.use(express.static(path.join(__dirname, 'build')));
 const PORT = 3030
 
